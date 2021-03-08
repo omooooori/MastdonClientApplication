@@ -22,7 +22,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = DataBindingUtil.bind(view)
-        binding?.textView?.text = "Hello Fragment"
+        binding?.button?.setOnClickListener {
+            binding?.button?.text  = "clicked"
+        }
 
     }
 
