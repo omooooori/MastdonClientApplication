@@ -1,9 +1,12 @@
 package com.omori.mastdonclientapplication
 
-import android.telecom.Call
+import okhttp3.ResponseBody
+import retrofit2.http.GET
 
 interface MastdonApi {
 
-    @GET("api/vl/timeline/public")
-    fun fetchPublicTimeLine() : Call<ResponseBody>
+    @GET("api/v1/timelines/public")
+    suspend fun fetchPublicTimeLine(
+    ) : ResponseBody
+
 }
