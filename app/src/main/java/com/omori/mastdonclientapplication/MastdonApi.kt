@@ -3,10 +3,10 @@ package com.omori.mastdonclientapplication
 import okhttp3.ResponseBody
 import retrofit2.http.GET
 
-interface MastdonApi {
+interface MastodonApi {
 
     @GET("api/v1/timelines/public")
-    suspend fun fetchPublicTimeLine(
+    suspend fun fetchPublicTimeline(
     ) : ResponseBody
 
 }
